@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{font-size: 62.5%;}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #092635;
+}
+.wrapper{
+    position: relative;
+    top: 100px;
+    max-width: 600px;
+    height: fit-content;
+    margin: 0 30px;
+    background-color: #F3F3F3;
+    padding-bottom: 50px;
+    border-radius: 20px;
+}
+.wrapper h1{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.parent-tab{
+    padding: 0 30px;
+}
+.wrapper .parent-tab label{
+    background: #FFE382;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.parent-tab label span{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.parent-tab label .icon i{
+    font-size: 1.6rem;
+}
+.content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+.content p{
+    background: #FFF5C2;
+    padding: 20px;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.parent-tab input{
+    display: none;
+}
+.parent-tab input:checked ~ .content{
+    max-height: 100vh;
+}
+.parent-tab input:checked ~ label .icon i::before{
+    content: "\f077";
+}
